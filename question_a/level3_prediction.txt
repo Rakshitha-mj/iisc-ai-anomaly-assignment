@@ -1,0 +1,30 @@
+Prediction:
+
+If the rolling z-score window is doubled from 60 seconds to 120 seconds,
+I predict that silent-drift recall will increase.
+
+Reason:
+A longer window provides a broader baseline for comparison, so the
+gradual 5-minute silent drift should produce a more noticeable deviation
+from the historical baseline.
+
+Results:
+
+60-second window:
+Silent-drift recall = 0.011
+Overall precision = 0.543
+Overall recall = 0.050
+Overall F1-score = 0.091
+Walking false alarms = 21
+
+120-second window:
+Silent-drift recall = 0.012
+Overall precision = 0.548
+Overall recall = 0.076
+Overall F1-score = 0.134
+Walking false alarms = 40
+
+Conclusion:
+The prediction was correct. Silent-drift recall increased slightly
+from 0.011 to 0.012 when the window was doubled from 60 to 120 seconds.
+However, walking false alarms also increased from 21 to 40.
